@@ -1,3 +1,4 @@
+import { ListUsersState } from 'app/containers/ListUsers/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 /* 
@@ -5,5 +6,6 @@
   You have to declare them here manually
 */
 export interface RootState {
+  listUsers?: ListUsersState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }

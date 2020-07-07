@@ -14,6 +14,7 @@ import { GlobalStyle } from 'styles/global-styles';
 
 import { HomePage } from './containers/HomePage/Loadable';
 import { NotFoundPage } from './components/NotFoundPage/Loadable';
+import { ListUsers } from './containers/ListUsers';
 
 export function App() {
   return (
@@ -27,6 +28,7 @@ export function App() {
 
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/widgets/users" component={ListUsers} />
         <Route component={NotFoundPage} />
       </Switch>
       <GlobalStyle />

@@ -4,18 +4,19 @@ import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { translations } from 'locales/i18n';
+import { ListUsers } from '../ListUsers';
 
 export function HomePage() {
   const { t } = useTranslation();
   const title = t(translations.title());
-  //const formattedString = t(translations.formattedString());
   const formattedString = t('formattedString', {
     first: 'my first',
     second: 'my second',
   });
 
   const handleClick = () => {
-    i18next.changeLanguage('de');
+    const nextLanguage = i18next.language === 'en' ? 'de' : 'en';
+    i18next.changeLanguage(nextLanguage);
   };
 
   return (
@@ -30,6 +31,8 @@ export function HomePage() {
       <div>{formattedString}</div>
       <hr />
       <button onClick={handleClick}>Switch</button>
+      <hr />
+      <ListUsers />
     </>
   );
 }
