@@ -1,5 +1,5 @@
 {
-  "title": "welcome",
+  "title": "Welcome",
   "newString": "My new string",
   "formattedString": "Hello {{first}} is {{second}}"
 }
