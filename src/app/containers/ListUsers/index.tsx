@@ -28,6 +28,9 @@ export function ListUsers(props: Props) {
   const handleTestChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch(actions.setTest({ test: event.currentTarget.value }));
   };
+  React.useEffect(() => {
+    dispatch(actions.setMountCount({}));
+  }, [dispatch]);
 
   return (
     <>

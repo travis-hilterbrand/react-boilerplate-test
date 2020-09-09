@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import i18next from 'i18next';
 import { useTranslation } from 'react-i18next';
 
 import { translations } from 'locales/i18n';
 import { ListUsers } from '../ListUsers';
+import { Test2 } from '../Test2';
 
 const Home = styled.div`
   padding: 16px;
@@ -38,6 +40,8 @@ export function HomePage() {
         <hr />
         <button onClick={handleSwitchLocaleClick}>Switch Locale</button>
         <hr />
+        <Link to="/widgets/users">{'widgets/users'}</Link>
+        <Test2 />
         <ListUsers />
       </Home>
     </>

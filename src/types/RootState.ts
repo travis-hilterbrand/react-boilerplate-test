@@ -1,6 +1,7 @@
 import { ListUsersState } from 'app/containers/ListUsers/types';
 import { MainPageState } from 'app/containers/MainPage/types';
 import { TestState } from 'app/containers/Test/types';
+import { Test2State } from 'app/containers/Test2/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 /* 
@@ -11,5 +12,6 @@ export interface RootState {
   listUsers?: ListUsersState;
   mainPage?: MainPageState;
   test?: TestState;
+  test2?: Test2State;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 }
